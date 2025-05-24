@@ -9,7 +9,9 @@
         @enderror
 
         <button type="submit" class="bg-slate-600 text-white px-6 h-11 rounded-md font-medium w-full">Get magic link</button>
-
+        @if (session('success'))
+            <p class="text-gray-600">{{ session('success') }}</p>
+        @endif
         @csrf
     </form>
 </x-app-layout>
